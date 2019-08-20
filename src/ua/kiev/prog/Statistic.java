@@ -21,14 +21,13 @@ public class Statistic extends javax.servlet.http.HttpServlet {
     }
 
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         int age = Integer.parseInt(request.getParameter("age"));
         String[] sports = request.getParameterValues("sport");
-        boolean sport = (sports!=null && sports.length > 0) ? true : false;
+        boolean sport = (sports != null && sports.length > 0) ? true : false;
         int books = Integer.parseInt(request.getParameter("books"));
         count++;
         HttpSession session = request.getSession(true);
@@ -40,13 +39,11 @@ public class Statistic extends javax.servlet.http.HttpServlet {
             count--;
             return;
         }
-        if (count == 1) {
-            synchronized (userStatistic) {
-                XMLWorker.loadStatisticFromXMLFile(file, userStatistic);
-            }
+        synchronized (userStatistic) {
+            XMLWorker.loadStatisticFromXMLFile(file, userStatistic);
         }
         userStatistic.updateStatistic(firstName, lastName, age, sport, books);
-        XMLWorker.saveStatisticToXMLFile(file,userStatistic);
+        XMLWorker.saveStatisticToXMLFile(file, userStatistic);
 
         session.setAttribute("xml_statistic", userStatistic.toString());
         session.setAttribute("user_count", getCount());
