@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<statistic>
+    <user_statistic>
+        <user_count>0</user_count>
+        <user_firstName></user_firstName>
+        <user_lastName></user_lastName>
+        <stat_age>0</stat_age>
+        <stat_sport>0</stat_sport>
+        <stat_books0>0</stat_books0>
+        <stat_books1>0</stat_books1>
+        <stat_books11>0</stat_books11>
+    </user_statistic>
+</statistic>

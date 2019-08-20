@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Questionnaire</title>
+</head>
+<body>
+<form action="/statistic" method="post">
+<p>
+First name: <input name="firstName" type="text"/><br/>
+Last name: <input name="lastName" type="text"/><br/>
+Age: <input name="age" type="text"/>
+</p>
+<p>
+I go in for sports<input name="sport" type="checkbox" value="sport"/>
+</p>
+<p>
+How many books have you read last year?<br/>
+  <label><input type="radio" name="books" value="0" checked/>haven't read any</label><br />
+  <label><input type="radio" name="books" value="1"/>from one to ten</label><br />
+  <label><input type="radio" name="books" value="11"/>more then ten</label><br />
+</p>
+<input type="submit" value="Send result" />
+</form>
+</body>
+</html>
